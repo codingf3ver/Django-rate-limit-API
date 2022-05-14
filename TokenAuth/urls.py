@@ -24,6 +24,5 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api-token-auth/', views.obtain_auth_token, name='api-token-auth'),
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
     path('',include('user_authAPI.urls')),
 ]
