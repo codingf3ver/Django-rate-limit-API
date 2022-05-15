@@ -48,10 +48,32 @@ class MessageView(APIView):
        
     def post(self, request, *args, **kwargs):
         message_data = request.data
-        create_message = Message.objects.create(message=message_data['message'], created_at=message_data['created_at'], updated_at=message_data['updated_at'])
+        create_message = Message.objects.create(message=message_data['message'])
         create_message.save()
-        serializer = MessageSerializers(create_message)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-        
+        # serializer = MessageSerializers(create_message)
+        data={ 
+            'message': 'success',
+            'status': status.HTTP_201_CREATED
+        }
 
-       
+        return Response(data ,status=status.HTTP_201_CREATED)
+    
+    def put(self, request, *args, **kwargs):
+        message_data = request.data
+        message_id = message_data['id']
+        Message.objects.filter(id=message_id).update(message=message_data['message'],updated_at=message_data['updated_at'])
+        data={ 
+            'message': 'message updated',
+            'status': status.HTTP_201_CREATED
+        }
+        return Response(data ,status=status.HTTP_201_CREATED)
+
+    def delete(self, request, *args, **kwargs):
+        message_data = request.data
+        message_id = message_data['id']
+        Message.objects.filter(id=message_id).delete()
+        data={ 
+            'message': 'message deleted',
+            'status': status.HTTP_201_CREATED
+        }
+        return Response(data ,status=status.HTTP_201_CREATED)
