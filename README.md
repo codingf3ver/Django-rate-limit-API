@@ -23,12 +23,10 @@ Getting Data from API
 <br>
 
 ```
-Getting Data from API
+Getting Data from API 2
 ```
 <img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/get-data.png" style="height:200px, width:400px" >
 <br>
-
-```
 
 ```
 Rate limit exceeded Error
