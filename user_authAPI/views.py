@@ -1,3 +1,5 @@
+import json
+from textwrap import indent
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -10,7 +12,8 @@ from .models import Message
 from django.contrib.auth.models import User
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
-
+from rest_framework.authtoken.models import Token
+from rest_framework.authtoken.views import ObtainAuthToken
 # Create your views here.
 
 def home(request):
@@ -23,11 +26,25 @@ class userviewsets(viewsets.ModelViewSet):
 class MessageView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
+    
 
     def get(self, request,*args, **kwargs):
         all_messages = Message.objects.all()
-        serializer = MessageSerializers(all_messages, many=True)
-        return Response(serializer.data)
+        message_serializer = MessageSerializers(data = all_messages, many=True)
+        message_serializer.is_valid()
+        current_user = request.user
+       
+        data = {
+            'user_id': current_user.id,
+            'messages': message_serializer.data,
+            'first_name': current_user.first_name,
+            'last_name': current_user.last_name,
+            'email': current_user.email,
+            }
+        json_data = json.dumps(data,indent=4)
+        with open('results.json', 'w') as f:
+            f.write(json_data)
+        return Response(data , status=status.HTTP_200_OK)
        
     def post(self, request, *args, **kwargs):
         message_data = request.data
@@ -35,6 +52,6 @@ class MessageView(APIView):
         create_message.save()
         serializer = MessageSerializers(create_message)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-        # return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
 
        
