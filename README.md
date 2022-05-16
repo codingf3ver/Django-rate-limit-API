@@ -1,7 +1,9 @@
 # Django-rate-limit-API
 
-This repository will give idea baout to create a token authenticated API which is 
-able to serve the data to the authenticated user with specific rate limit
+This repository will give idea about to create a token authenticated API which is 
+able to serve the data to the authenticated user with specific rate limit and it is 
+not limited to provide data rather an authenticated user using auth token can update, 
+delete and send the data 
 
 
 ```
@@ -31,8 +33,24 @@ Getting Data from API 2
 ```
 Updating the messages 
 ```
-<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/get-data2.png" style="height:200px, width:400px" >
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/update.png" style="height:200px, width:400px" >
 <br>
+
+```
+Message updation confirmation from DB
+```
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/updatedb.png" style="height:200px, width:400px" >
+<br>
+
+```
+Deleting users using API and confirmation from DB
+```
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/delete.png" style="height:200px, width:400px" >
+<br>
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/deletedb.png" style="height:200px, width:400px" >
+<br>
+
+
 
 ```
 Rate limit exceeded Error
