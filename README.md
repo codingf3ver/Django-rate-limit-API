@@ -29,6 +29,12 @@ Getting Data from API 2
 <br>
 
 ```
+Updating the messages 
+```
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/get-data2.png" style="height:200px, width:400px" >
+<br>
+
+```
 Rate limit exceeded Error
 ```
 <img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/rate-limit.png" style="height:200px, width:400px" >
