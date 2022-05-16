@@ -73,7 +73,7 @@ class MessageView(APIView):
         message_id = message_data['id']
         Message.objects.filter(id=message_id).delete()
         data={ 
-            'message': 'message deleted',
+            'message': 'user deleted',
             'status': status.HTTP_201_CREATED
         }
         return Response(data ,status=status.HTTP_201_CREATED)
