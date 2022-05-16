@@ -13,19 +13,19 @@ Token generation API
 ```
 Messsage posting API
 ```
-<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/post.png" style="height:200px, width:400px" >
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/post-data.png" style="height:200px, width:400px" >
 <br>
 
 ```
 Getting Data from API
 ```
-<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/get-data1.png" style="height:200px, width:400px" >
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/get-data.png" style="height:200px, width:400px" >
 <br>
 
 ```
 Getting Data from API 2
 ```
-<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/get-data.png" style="height:200px, width:400px" >
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/get-data2.png" style="height:200px, width:400px" >
 <br>
 
 ```
