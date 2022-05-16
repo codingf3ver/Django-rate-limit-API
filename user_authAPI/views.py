@@ -24,8 +24,8 @@ class userviewsets(viewsets.ModelViewSet):
     serializer_class = userSerializers
 
 class MessageView(APIView):
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated]
+    authentication_classes = (TokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
     
 
     def get(self, request,*args, **kwargs):
@@ -60,8 +60,8 @@ class MessageView(APIView):
     
     def put(self, request, *args, **kwargs):
         message_data = request.data
-        message_id = message_data['id']
-        Message.objects.filter(id=message_id).update(message=message_data['message'],updated_at=message_data['updated_at'])
+        id = message_data['id']
+        Message.objects.filter(id=id).update(message=message_data['message'],updated_at=message_data['updated_at'])
         data={ 
             'message': 'message updated',
             'status': status.HTTP_201_CREATED
@@ -77,7 +77,3 @@ class MessageView(APIView):
             'status': status.HTTP_201_CREATED
         }
         return Response(data ,status=status.HTTP_201_CREATED)
-    
-    
-    
-    
