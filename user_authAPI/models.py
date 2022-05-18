@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Message(models.Model):
-    id = models.AutoField(primary_key=True)
+    message_id = models.AutoField(primary_key=True)
     message = models.CharField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
