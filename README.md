@@ -64,7 +64,7 @@ Database tables for the Auth API
 ```
 Data overview in MySQL database
 ```
-<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/db2.png" style="height:200px, width:400px" >
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/db3.png" style="height:200px, width:400px" >
 <br>
 
 
