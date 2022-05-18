@@ -21,10 +21,10 @@ Messsage posting API
 ```
 Getting Data from API
 ```
-<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/get-data1.png" style="height:200px, width:400px" >
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/getdata1.png" style="height:200px, width:400px" >
 <br>
 
-<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/gtdata2.png" style="height:200px, width:400px" >
+<img src="https://github.com/codingf3ver/Images/blob/main/Django%20rate%20limit%20API/getdata2.png" style="height:200px, width:400px" >
 <br>
 
 ```
